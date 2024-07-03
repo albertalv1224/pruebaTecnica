@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+  
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+
+<body>
+    <header th:fragment="header">
+        <nav>
+            <ul class="nav-menu">
+                <li th:if="${ruta != '/'}"><a th:href="@{/}" >Index</a></li>
+                <li><a th:href="@{/articulos/listado}">Listado de Artículos</a></li>
+                <li><a th:href="@{/cliente/listado}">Listado de Clientes</a></li>
+                <li><a th:href="@{/pedido/listado}">Listado de Pedidos</a></li>
+                <li><a th:href="@{/pedido/crear}">Crear nuevo pedido</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
+
