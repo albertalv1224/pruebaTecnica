@@ -32,7 +32,7 @@ public class ReportGenerator {
         params.put("partidasData", new JRBeanCollectionDataSource(partidas));
 
         JasperPrint report = JasperFillManager.fillReport(
-                JasperCompileManager.compileReport(ResourceUtils.getFile("/home/ubuntu/Invoice.jrxml").getAbsolutePath()),
+                JasperCompileManager.compileReport(ResourceUtils.getFile("classpath:Invoice.jrxml").getAbsolutePath()),
                 params,
                 new JREmptyDataSource());
 
